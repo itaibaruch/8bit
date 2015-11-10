@@ -1,6 +1,7 @@
 
 var windowHeight;
 var windowWidth;
+var lastScrollTop = 0;
 
 $(document).ready(function(){
     BrowserDetect.init();
@@ -19,6 +20,7 @@ $(window).on('scroll',function(){
         rockStar.checkScrollForParallax();
    }
    rockStar.checkIfToActiveNavLink();
+   rockStar.checkIfToShowMainNavbar();
 });
 
 $(window).load(function(){
@@ -120,6 +122,31 @@ var rockStar = {
                 })
             }
         });
+    }, 10),
+    checkIfToShowMainNavbar: debounce(function() {           
+        var delta = 5;
+        var navbarHeight = $('#main-navbar').outerHeight();
+
+        var st = $(window).scrollTop();
+        
+        // Make sure they scroll more than delta
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+        
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            $('#main-navbar').slideUp(400);
+        } else {
+            // Scroll Up
+            if(st + $(window).height() < $(document).height()) {
+                $('#main-navbar').slideDown(400);
+            }
+        }
+        
+        lastScrollTop = st;
+
     }, 10)
 }
 

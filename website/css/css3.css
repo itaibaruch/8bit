@@ -99,6 +99,7 @@ ul.three-d li{
     width: 3rem;
     display: inline;
 }
+
 section {
     padding: 0;
     position: relative;
@@ -382,7 +383,7 @@ section#careers .parallax{
 .img-address{
     display: block;
     width: 20rem;
-    margin: -6rem auto 0rem;
+    margin: 0 auto;
     position: relative;
     z-index: 11;
 }
@@ -588,6 +589,10 @@ section#job .parallax{
     }*/
     #careers .jobs{
         height: 11rem;
+    }
+
+    .img-address{
+        margin: -6rem auto 0rem;
     }
 }
 
