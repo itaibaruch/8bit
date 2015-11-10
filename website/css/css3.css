@@ -73,7 +73,8 @@ ul.three-d li{
     border-bottom: .2rem solid #00a800;
 }
 .navbar-toggler{
-    font-size: 1.8rem;
+    padding: .75rem .75rem;
+    font-size: 1.4rem;
 }
 .navbar-toggler:focus {
     outline: 0;
@@ -201,10 +202,6 @@ section h2.heading{
     height: 50vw;
     margin-top: 3rem;
     padding: .5rem;
-}
-.black-ball img{
-    padding-left: 4rem;
-    padding-right: 4rem;
 }
 .section-header .content .lead{
     display: none;
@@ -600,6 +597,10 @@ section#job .parallax{
         width: 30vw;
         height: 30vw;
         margin-top: 0;
+    }
+    .black-ball img{
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
 }
 
