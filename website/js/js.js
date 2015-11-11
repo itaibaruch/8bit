@@ -20,11 +20,12 @@ $(document).ready(function(){
 });
 
 $(window).on('scroll',function(){
-   if(windowWidth > 480){
+   if(windowWidth > 544){
         rockStar.checkScrollForParallax();
+   }else{
+        rockStar.checkIfToShowMainNavbar(); 
    }
    rockStar.checkIfToActiveNavLink();
-   rockStar.checkIfToShowMainNavbar();
 });
 
 $(window).load(function(){
@@ -47,6 +48,19 @@ $('a[data-scroll="true"]').click(function(e){
         }, 1000);
     }
 });
+
+//when user click on job tile
+// $('.job-title small[data-target="#job-form"]').click(function(e){
+//     var $jobForm = $('#job-form');
+//     var careerH = $('#careers').height();
+//     if($jobForm.attr('class') === 'collapse in'){
+//         $('#careers').css('height' , careerH - 400);
+//         $('#careers .parallax').css('height' , careerH - 400);
+//     }else{
+//         $('#careers').css('height' , careerH + 400);
+//         $('#careers .parallax').css('height' , careerH + 400);
+//     }
+// });
 
 var rockStar = {
     initAnimationsCheck: function(){
