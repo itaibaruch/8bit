@@ -101,7 +101,7 @@ var rockStar = {
         $('section').each(function() {
             var $el = $(this);
             var elId = $el.attr('id');
-            if(isElementInViewport($el)){
+            if(isElementInTopViewport($el)){
                 $('#nav-links a').each(function(){
                     var $link = $(this);
                     if($link.attr('data-id') === '#'+elId){
@@ -159,6 +159,45 @@ function isElementInViewport(el) {
         rect.left < windowWidth &&
         rect.top < windowHeight
     );
+}
+
+// http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+// return true iv the elemnt is visible
+function isElementInTopViewport(el) {
+
+    // var distance = el.offset().top,
+    // $window = $(window);
+    // if(el.attr('id') === 'what-we-do'){
+    //     console.log('$window.scrollTop(): ' + $window.scrollTop());
+    //     console.log('distance: ' + distance);
+    // }
+
+    // if ( $window.scrollTop() >= distance ) {
+    //     return true;
+    // }else{
+    //     return false;
+    // }
+    var $window = $(window);
+    var windowHeight = $window.height(),
+    gridTop = windowHeight * .1,
+    gridBottom = windowHeight * .9;
+
+    var thisTop = el.offset().top - $window.scrollTop(); // Get the `top` of this el
+
+    if(el.attr('id') === 'what-we-do'){
+        console.log('thisTop: ' + thisTop);
+        console.log('gridTop: ' + gridTop);
+        console.log('(thisTop + el.height()): ' + (thisTop + el.height()));
+        console.log('gridBottom: ' + gridBottom);
+        
+    }
+
+    // Check if this element is in the interested viewport
+    if (thisTop >= gridTop && (thisTop + el.height()) <= gridBottom) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // https://gist.github.com/iwanbk/5906833

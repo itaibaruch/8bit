@@ -525,6 +525,7 @@ section#job .parallax{
     section#what-we-do,
     section#what-we-do .parallax{
         height: 50rem;
+        background-color: #0f290a;
     }
     section#careers,
     section#careers .parallax{
@@ -551,6 +552,9 @@ section#job .parallax{
 
  /*Medium devices (tablets, 48em and up)*/
 @media (min-width: 48em) {
+    .navbar.navbar-fixed-top .nav.navbar-nav .nav-item.nav-link{
+        margin-right: 1rem;
+    }
     .section .content {
         top: 50%;
         -webkit-transform: translateY(-50%);
