@@ -141,11 +141,11 @@ var rockStar = {
         // This is necessary so you never see what is "behind" the navbar.
         if (st > lastScrollTop && st > navbarHeight){
             // Scroll Down
-            $('#main-navbar').slideUp('fast');
+            $('#main-navbar').slideUp();
         } else {
             // Scroll Up
             if(st + windowHeight < docHeight) {
-                $('#main-navbar').slideDown('fast');
+                $('#main-navbar').slideDown();
             }
         }
         

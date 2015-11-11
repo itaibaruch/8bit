@@ -410,7 +410,7 @@ section#careers .parallax{
 .img-address{
     display: block;
     width: 20rem;
-    margin: 0 auto;
+    margin: -8rem auto 0;
     position: relative;
     z-index: 11;
 }
@@ -437,6 +437,11 @@ footer{
     border-radius: 50%;
     padding: .5rem;
     margin: 1rem auto;
+}
+.map-bg{
+    background-image: url('../img/gMaps2.jpg');
+    height: 50vh;
+    background-position: 50%;
 }
 
 /*
@@ -491,58 +496,6 @@ section#job .parallax{
     height: 154px;
 }
 
-
-
-@media (max-width: 34em) {
-    /*.navbar-toggler.pull-left.hidden-sm-up,
-    .navbar-brand.pull-right.hidden-sm-up{
-        width: 49%;
-    }
-    .navbar-toggler.pull-left.hidden-sm-up{
-        text-align: left;
-    }
-    .navbar-brand.pull-right.hidden-sm-up{
-        margin: 0;
-        text-align: right;
-    }
-    .navbar-brand.pull-right.hidden-sm-up img {
-        width: 3rem;
-        display: inline;
-    }
-    .nav-wrapper{
-        width: 100%;
-    }
-    .navbar-toggleable-xs.collapse{
-        max-height: 3rem;
-    }
-    .navbar-toggleable-xs.collapse .nav-wrapper{
-        opacity: 0;
-    }
-    .navbar-toggleable-xs.collapse.in .nav-wrapper{
-        opacity: 1;
-    }
-    .collapsing{
-        -webkit-transition: none;
-              transition: none;
-    }*/
-
-    /*section#what-we-do,
-    section#what-we-do .parallax{
-        height: 70rem;
-    }
-    #what-we-do .content{
-        top: 0;
-        transform: translateY(0%);
-    }
-    section#careers,
-    section#careers .parallax{
-        height: 90rem;
-    }
-    #careers .content{
-        top: 0;
-        transform: translateY(0%);
-    }*/
-}
 /*Small devices (landscape phones, 34em and up)*/
 @media (min-width: 34em) {
     .nav-wrapper{
@@ -594,6 +547,10 @@ section#job .parallax{
     #team-6{ position:absolute; top: 24rem; left: 8rem;}
     #team-7{ position:absolute; top: 32rem; left: 0rem;}
     #team-8{ position:absolute; top: 32rem; left: 16rem;}
+
+    .img-address{
+        margin: -6rem auto -16rem;
+    }
 }
 
  /*Medium devices (tablets, 48em and up)*/
@@ -639,10 +596,6 @@ section#job .parallax{
     }*/
     #careers .jobs{
         height: 11rem;
-    }
-
-    .img-address{
-        margin: -6rem auto 0rem;
     }
     #open-source{
         text-align: right;
