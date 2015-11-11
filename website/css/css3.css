@@ -204,6 +204,10 @@ section h2.heading{
     margin-top: 3rem;
     padding: .5rem;
 }
+.black-ball img{
+    margin: auto;
+}
+
 .section-header .content .lead{
     display: none;
     font-size: .8rem;
@@ -252,12 +256,18 @@ section#what-we-do .parallax{
 .what-we-do-pic{
     width: 15rem;
 }
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
+.carousel, 
+.carousel-inner,
+.carousel-item {
+    height: 20rem;
+}
+
 .carousel {
-    height: 10rem;
     width: 80vw;
     margin: -1.5rem auto 0;
     z-index: 10;
@@ -268,7 +278,6 @@ section#what-we-do .parallax{
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 10rem;
   background-color: #000;
 }
 /*.carousel-item > img {
@@ -282,6 +291,8 @@ section#what-we-do .parallax{
     margin: 0;
     padding: 0;
     top: 1rem;
+    right: 10%;
+    left: 10%;
 }
 
 .carousel-indicators {
@@ -297,6 +308,20 @@ section#what-we-do .parallax{
   margin-bottom: .25rem;
 }
 
+.carousel-control{
+    width: 10%;
+}
+#myCarousel .icon-left,
+#myCarousel .icon-right{
+    line-height: 15;
+}
+#myCarousel .icon-left{
+    text-align: left;
+}
+#myCarousel .icon-right{
+    text-align: right;
+}
+
 /*
  team
  */
@@ -308,7 +333,9 @@ section#team{
 section#team h3.title{
     min-height: 3.5rem;
 }
-
+#open-source{
+    margin-bottom: 1rem;
+}
 
 /*
  careers
@@ -397,10 +424,19 @@ section#careers .parallax{
  footer
  */
 footer{
-    padding: 3rem;
+    padding: 0.5rem 3rem;
     position: relative;
     background-color: #f7f7f7;
     min-height: 10vh;
+}
+
+.img-footer{
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: .5rem;
+    margin: 1rem auto;
 }
 
 /*
@@ -523,6 +559,15 @@ section#job .parallax{
     .black-ball{
         padding: .5rem 2rem;
     }
+    .carousel, 
+    .carousel-inner,
+    .carousel-item {
+        height: 10rem;
+    }
+    #myCarousel .icon-left,
+    #myCarousel .icon-right{
+        line-height: 7.5;
+    }
     section#what-we-do,
     section#what-we-do .parallax{
         height: 50rem;
@@ -570,6 +615,7 @@ section#job .parallax{
     section#job .parallax{
         height: 35rem;
     }*/
+    
     section#careers,
     section#careers .parallax{
         /*height: 48rem;*/
@@ -598,22 +644,33 @@ section#job .parallax{
     .img-address{
         margin: -6rem auto 0rem;
     }
+    #open-source{
+        text-align: right;
+        margin-bottom: 0;
+    }
+    #build-teams{
+        text-align: left;   
+    }
+    .img-footer{
+        margin: auto;
+        position: absolute;
+        left: calc(50% - 2.5rem);
+    }
 }
 
  /*Large devices (desktops, 62em and up)*/
 @media (min-width: 62em) {
     .black-ball{
-        width: 30vw;
-        height: 30vw;
+        width: 40vw;
+        height: 40vw;
         margin-top: 0;
-    }
-    .black-ball img{
-        padding-left: 4rem;
-        padding-right: 4rem;
     }
 }
 
  /*Extra large devices (large desktops, 75em and up)*/
 @media (min-width: 75em) {
-
+    .black-ball{
+        width: 25vw;
+        height: 25vw;
+    }
 }

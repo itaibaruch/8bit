@@ -1,6 +1,8 @@
 
 var windowHeight;
 var windowWidth;
+var docWidth;
+var docHeight;
 var lastScrollTop = 0;
 
 $(document).ready(function(){
@@ -12,6 +14,8 @@ $(document).ready(function(){
 
     windowWidth = $(window).width();
     windowHeight = $(window).height();
+    docWidth = $(document).width();
+    docHeight = $(document).height();
     rockStar.checkIfToActiveNavLink();
 });
 
@@ -103,7 +107,7 @@ var rockStar = {
         $('section').each(function() {
             var $el = $(this);
             var elId = $el.attr('id');
-            if(isElementInTopViewport($el)){
+            if(isElementInViewport($el)){
                 $('#nav-links a').each(function(){
                     var $link = $(this);
                     if($link.attr('data-id') === '#'+elId){
@@ -140,7 +144,7 @@ var rockStar = {
             $('#main-navbar').slideUp('fast');
         } else {
             // Scroll Up
-            if(st + $(window).height() < $(document).height()) {
+            if(st + windowHeight < docHeight) {
                 $('#main-navbar').slideDown('fast');
             }
         }
@@ -190,42 +194,46 @@ function isElementInViewport(el) {
 
 // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
 // return true iv the elemnt is visible
-function isElementInTopViewport(el) {
+// function isElementInTopViewport(el) {
 
-    // var distance = el.offset().top,
-    // $window = $(window);
-    // if(el.attr('id') === 'what-we-do'){
-    //     console.log('$window.scrollTop(): ' + $window.scrollTop());
-    //     console.log('distance: ' + distance);
-    // }
+//     // var distance = el.offset().top,
+//     // $window = $(window);
+//     // if(el.attr('id') === 'what-we-do'){
+//     //     console.log('$window.scrollTop(): ' + $window.scrollTop());
+//     //     console.log('distance: ' + distance);
+//     // }
 
-    // if ( $window.scrollTop() >= distance ) {
-    //     return true;
-    // }else{
-    //     return false;
-    // }
-    var $window = $(window);
-    var windowHeight = $window.height(),
-    gridTop = windowHeight * .1,
-    gridBottom = windowHeight * .9;
+//     // if ( $window.scrollTop() >= distance ) {
+//     //     return true;
+//     // }else{
+//     //     return false;
+//     // }
+//     var $window = $(window);
+//     // var windowHeight = $window.height(),
+//     gridTop = windowHeight * .25,
+//     gridBottom = windowHeight * .7;
 
-    var thisTop = el.offset().top - $window.scrollTop(); // Get the `top` of this el
+//     var thisTop = el.offset().top - $window.scrollTop(); // Get the `top` of this el
 
-    if(el.attr('id') === 'what-we-do'){
-        console.log('thisTop: ' + thisTop);
-        console.log('gridTop: ' + gridTop);
-        console.log('(thisTop + el.height()): ' + (thisTop + el.height()));
-        console.log('gridBottom: ' + gridBottom);
-        
-    }
+//     if(el.attr('id') === 'team'){
+//         console.log('el: ' + el.attr('id'));
+//         console.log('gridTop: ' + gridTop);
+//         console.log('gridBottom: ' + gridBottom);
+//         console.log('thisTop: ' + thisTop);
+//         console.log('(thisTop + el.height()): ' + (thisTop + el.height()));
+//         console.log('--------------');
+//     }
 
-    // Check if this element is in the interested viewport
-    if (thisTop >= gridTop && (thisTop + el.height()) <= gridBottom) {
-        return true;
-    } else {
-        return false;
-    }
-}
+//     // Check if this element is in the interested viewport
+//     // if (thisTop >= gridTop && (thisTop + el.height()) <= gridBottom) {
+//     if (thisTop >= gridTop && thisTop <= gridBottom) {
+//         return true;
+//     } else if (thisTop <= gridTop && (thisTop + el.height()) <= gridBottom) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
 // https://gist.github.com/iwanbk/5906833
 // detect the current browser
