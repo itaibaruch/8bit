@@ -637,7 +637,7 @@ section#job .parallax{
         height: 11rem; 
     }*/
     #careers .jobs{
-        height: 20rem;
+        height: 16rem;
     }
     #open-source{
         text-align: right;
@@ -650,6 +650,9 @@ section#job .parallax{
         margin: auto;
         position: absolute;
         left: calc(50% - 2.5rem);
+    }
+    section#contact-us {
+        min-height: 22rem;
     }
 }
 
