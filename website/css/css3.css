@@ -23,16 +23,20 @@ h1, h2, h3, h4, h5, h6,
     color: #008a00;
 }
 .c-b{
-    color: #000000;
+    color: #373A3C;
 }
 .b-g{
     background-color: #008a00;
 }
 .b-b{
-    background-color: #000000;
+    background-color: #373A3C;
 }
 .m-auto{
     margin: 0 auto;
+}
+a.c-b,
+a.c-b:hover{
+    text-decoration: none;
 }
 .waypoint{
     opacity: 0;
@@ -513,7 +517,10 @@ footer{
  */
 section#what-we-do,
 section#what-we-do .parallax{
-    height: 85rem;
+    height: 95rem;
+}
+section#what-we-do h2{
+    margin-top: 10rem;
 }
 #what-we-do .content{
     top: 0;
@@ -521,7 +528,10 @@ section#what-we-do .parallax{
 }
 section#careers,
 section#careers .parallax{
-    height: 155rem;
+    height: 165rem;
+}
+section#careers h2{
+    margin-top: 10rem;
 }
 #careers .content{
     top: 0;
@@ -595,13 +605,13 @@ section#job .parallax{
     }
     section#what-we-do,
     section#what-we-do .parallax{
-        height: 55rem;
+        height: 65rem;
         background-color: #0f290a;
     }
     section#careers,
     section#careers .parallax{
         /*height: 70rem;*/
-        height: 138rem;
+        height: 148rem;
     }
     /*section#job,
     section#job .parallax{
@@ -647,7 +657,7 @@ section#job .parallax{
     section#careers,
     section#careers .parallax{
         /*height: 48rem;*/
-        height: 95rem;
+        height: 105rem;
     }
     .team-wrapper{
         width: 47rem;
