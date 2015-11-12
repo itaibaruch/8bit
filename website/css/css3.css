@@ -384,6 +384,10 @@ section#team h3.title{
     margin-bottom: 1rem;
 }
 
+#members img{
+    border-radius: 50%;
+}
+
 /*
  careers
  */
