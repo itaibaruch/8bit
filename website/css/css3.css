@@ -6,21 +6,41 @@ h1, h2, h3, h4, h5, h6,
     font-family: 'upheavtt';
     text-align: center;
     text-transform: uppercase;
+    word-spacing: 0.5rem;
+    letter-spacing: 0.15rem;
+}
+h4, h5, h6,
+.nav-item.nav-link{
+    word-spacing: 0;
+}
+.btn{
+    border-radius: 0;
+}
+.btn-success{
+    background-color: #008a00;
+}
+.nav-item.nav-link{
+    word-spacing: 0;
+    letter-spacing: 0.05rem; 
 }
 .c-g{
     color: #008a00;
 }
 .c-b{
-    color: #000000;
+    color: #373A3C;
 }
 .b-g{
     background-color: #008a00;
 }
 .b-b{
-    background-color: #000000;
+    background-color: #373A3C;
 }
 .m-auto{
     margin: 0 auto;
+}
+a.c-b,
+a.c-b:hover{
+    text-decoration: none;
 }
 .waypoint{
     opacity: 0;
@@ -56,6 +76,61 @@ ul.three-d li{
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
+/*
+    Carousel
+ */
+.carousel, 
+.carousel-inner,
+.carousel-item {
+    height: 15rem;
+}
+
+.carousel {
+    width: 100%;
+    margin: -1.5rem auto 0;
+    z-index: 10;
+}
+.carousel-caption{
+    margin: 0;
+    padding: 0;
+    top: 1rem;
+    right: 10%;
+    left: 10%;
+}
+
+.carousel-indicators {
+  top: 1.5rem;
+  right: 1.5rem;
+  bottom: auto;
+  left: auto;
+  width: 1rem;
+  margin-left: 0;
+}
+
+.carousel-indicators > li {
+  margin-bottom: .25rem;
+}
+
+.carousel-control{
+    width: 10%;
+}
+
+.icon-left,
+.icon-right{
+    line-height: 8;
+}
+.icon-left{
+    text-align: left;
+}
+.icon-right{
+    text-align: right;
+}
+
+/*
+    navbar
+ */
+
 .navbar{
     margin-bottom: 0;
     border-bottom: .2rem solid #008a00;
@@ -114,7 +189,6 @@ section h2.heading{
 }
 .section-header {
     padding: 0;
-    /*height: 100vh;*/
     position: relative;
 }
 .section .parallax, 
@@ -149,8 +223,6 @@ section h2.heading{
     top: 0;
 }
 .section .content {
-    /*background-color: #f00;*/
-    /*padding-top: 6rem;*/
     padding-bottom: 6rem;
     margin-bottom: 0;
     position: relative;
@@ -175,8 +247,6 @@ section h2.heading{
     top: 0;
 }
 .section-header .content {
-    /*background-color: #f00;*/
-    /*padding-top: 6rem;*/
     padding-bottom: 6rem;
     margin-bottom: 0;
     position: relative;
@@ -195,10 +265,6 @@ section h2.heading{
     background-color: #000000;
     border-radius: 50%;
     margin: 0 auto;
-    /*width: 10rem;
-    height: 10rem;*/
-    /*width: 38%;
-    height: 38%;*/
     width: 50vw;
     height: 50vw;
     margin-top: 3rem;
@@ -230,95 +296,76 @@ a.scroll-arrow {
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+    padding: 0.5rem 0 0 0.5rem;
+}
+a span.scroll-arrow-inner{
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-right: .5rem solid #fff;
+    border-bottom: .5rem solid #fff;
 }
 
 /*
     About
  */
 .square{
-    /*width: 5rem;
-    height: 5rem;
-    background-color: #00a800;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);*/
     margin: 2rem auto;
+}
+#about-us-carousel .carousel-caption,
+#about-us-carousel .carousel-control{
+    color: #000;
+    text-shadow: none;
+}
+
+#about-us-carousel .carousel-indicators{
+    width: 4rem;
+    top: 100%;
+    left: calc(50% - 2rem);
+}
+#about-us-carousel .carousel-indicators li, 
+#about-us-carousel .carousel-indicators li.active {
+    border-radius: 0;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    border-color: #000;
+}
+#about-us-carousel .carousel-indicators li.active{
+    background-color: #000;
+}
+
+#about-us-carousel .carousel-control{
+    background-image: none;
 }
 
 /*
  What We Do
  */
-section#what-we-do .parallax{
+/*section#what-we-do .parallax{
     height: 120vh;
-}
+}*/
 .what-we-do-pic{
     width: 15rem;
 }
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel, 
-.carousel-inner,
-.carousel-item {
-    height: 20rem;
-}
-
-.carousel {
-    width: 80vw;
-    margin: -1.5rem auto 0;
-    z-index: 10;
-}
-.carousel-inner{
+#what-we-do .carousel-inner{
     border: .2rem solid #008a00;
+    background-color: #000;
 }
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  background-color: #000;
+#what-we-do-carousel.carousel, 
+#what-we-do-carousel .carousel-inner, 
+#what-we-do-carousel .carousel-item{
+    height: 25rem;
 }
-/*.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 10rem;
-}*/
-.carousel-caption{
-    margin: 0;
-    padding: 0;
-    top: 1rem;
-    right: 10%;
-    left: 10%;
-}
-
-.carousel-indicators {
-  top: 1.5rem;
-  right: 1.5rem;
-  bottom: auto;
-  left: auto;
-  width: 1rem;
-  margin-left: 0;
-}
-
-.carousel-indicators > li {
-  margin-bottom: .25rem;
-}
-
-.carousel-control{
-    width: 10%;
-}
-#myCarousel .icon-left,
-#myCarousel .icon-right{
+#what-we-do-carousel .icon-left,
+#what-we-do-carousel .icon-right{
     line-height: 15;
 }
-#myCarousel .icon-left{
+#what-we-do-carousel .icon-left{
     text-align: left;
 }
-#myCarousel .icon-right{
+#what-we-do-carousel .icon-right{
     text-align: right;
 }
 
@@ -380,17 +427,46 @@ section#careers .parallax{
     transform: translateY(-35%);
 }
 #careers .jobs{
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
     border: .2rem solid #008a00;
     margin-bottom: 5rem;
 }
-
+.job-title{
+    min-height: 7rem;
+}
+#job-form{
+    min-height: 10rem;
+}
+#jobs-options{
+    list-style: none;
+    padding-left: 0;
+}
+#job-detail{
+    padding-bottom: 4rem;
+    border-bottom: .2rem solid #008a00;
+}
+#job-detail.no-parallax{
+    z-index: 10;
+}
+#job-detail a.scroll-arrow{
+    bottom: -1.9rem;
+}
+#job-detail .container{
+    position: relative;
+} 
+#job-detail .btn-close{
+    font-size: 200%;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+}
 /*
  job
  */
-#job {
+/*#job {
     z-index: 10;
-    /*background-image: url('../img/careersBg.jpg');*/
+    background-image: url('../img/careersBg.jpg');
 }
 #job .container{
     color: white;
@@ -402,15 +478,19 @@ section#careers .parallax{
     padding: 2rem;
     border: .2rem solid #008a00;
     margin-bottom: 5rem;
-}
+}*/
+
 
 /*
  contact us
  */
+section#contact-us{
+    height: 25rem;
+}
 .img-address{
     display: block;
     width: 20rem;
-    margin: 0 auto;
+    margin: 0 auto ;
     position: relative;
     z-index: 11;
 }
@@ -438,13 +518,21 @@ footer{
     padding: .5rem;
     margin: 1rem auto;
 }
+.map-bg{
+    background-image: url('../img/gMaps2.jpg');
+    height: 50vh;
+    background-position: 50%;
+}
 
 /*
  fixes // TODO : arrage;
  */
 section#what-we-do,
 section#what-we-do .parallax{
-    height: 70rem;
+    height: 95rem;
+}
+section#what-we-do h2{
+    margin-top: 10rem;
 }
 #what-we-do .content{
     top: 0;
@@ -452,7 +540,10 @@ section#what-we-do .parallax{
 }
 section#careers,
 section#careers .parallax{
-    height: 130rem;
+    height: 175rem;
+}
+section#careers h2{
+    margin-top: 10rem;
 }
 #careers .content{
     top: 0;
@@ -491,58 +582,6 @@ section#job .parallax{
     height: 154px;
 }
 
-
-
-@media (max-width: 34em) {
-    /*.navbar-toggler.pull-left.hidden-sm-up,
-    .navbar-brand.pull-right.hidden-sm-up{
-        width: 49%;
-    }
-    .navbar-toggler.pull-left.hidden-sm-up{
-        text-align: left;
-    }
-    .navbar-brand.pull-right.hidden-sm-up{
-        margin: 0;
-        text-align: right;
-    }
-    .navbar-brand.pull-right.hidden-sm-up img {
-        width: 3rem;
-        display: inline;
-    }
-    .nav-wrapper{
-        width: 100%;
-    }
-    .navbar-toggleable-xs.collapse{
-        max-height: 3rem;
-    }
-    .navbar-toggleable-xs.collapse .nav-wrapper{
-        opacity: 0;
-    }
-    .navbar-toggleable-xs.collapse.in .nav-wrapper{
-        opacity: 1;
-    }
-    .collapsing{
-        -webkit-transition: none;
-              transition: none;
-    }*/
-
-    /*section#what-we-do,
-    section#what-we-do .parallax{
-        height: 70rem;
-    }
-    #what-we-do .content{
-        top: 0;
-        transform: translateY(0%);
-    }
-    section#careers,
-    section#careers .parallax{
-        height: 90rem;
-    }
-    #careers .content{
-        top: 0;
-        transform: translateY(0%);
-    }*/
-}
 /*Small devices (landscape phones, 34em and up)*/
 @media (min-width: 34em) {
     .nav-wrapper{
@@ -559,24 +598,32 @@ section#job .parallax{
     .black-ball{
         padding: .5rem 2rem;
     }
+    
     .carousel, 
     .carousel-inner,
-    .carousel-item {
-        height: 10rem;
+    .carousel-item,
+    #what-we-do-carousel.carousel, 
+    #what-we-do-carousel .carousel-inner, 
+    #what-we-do-carousel .carousel-item{
+        height: 14rem;
     }
-    #myCarousel .icon-left,
-    #myCarousel .icon-right{
-        line-height: 7.5;
+    .icon-left,
+    .icon-right{
+        line-height: 8;
+    }
+    #what-we-do-carousel .icon-left,
+    #what-we-do-carousel .icon-right{
+        line-height: 10;
     }
     section#what-we-do,
     section#what-we-do .parallax{
-        height: 50rem;
+        height: 65rem;
         background-color: #0f290a;
     }
     section#careers,
     section#careers .parallax{
         /*height: 70rem;*/
-        height: 115rem;
+        height: 148rem;
     }
     /*section#job,
     section#job .parallax{
@@ -594,6 +641,10 @@ section#job .parallax{
     #team-6{ position:absolute; top: 24rem; left: 8rem;}
     #team-7{ position:absolute; top: 32rem; left: 0rem;}
     #team-8{ position:absolute; top: 32rem; left: 16rem;}
+
+    .img-address{
+        margin: -2rem auto -16rem;
+    }
 }
 
  /*Medium devices (tablets, 48em and up)*/
@@ -615,11 +666,10 @@ section#job .parallax{
     section#job .parallax{
         height: 35rem;
     }*/
-    
     section#careers,
     section#careers .parallax{
         /*height: 48rem;*/
-        height: 90rem;
+        height: 105rem;
     }
     .team-wrapper{
         width: 47rem;
@@ -638,11 +688,7 @@ section#job .parallax{
         height: 11rem; 
     }*/
     #careers .jobs{
-        height: 11rem;
-    }
-
-    .img-address{
-        margin: -6rem auto 0rem;
+        height: 16rem;
     }
     #open-source{
         text-align: right;
@@ -655,6 +701,9 @@ section#job .parallax{
         margin: auto;
         position: absolute;
         left: calc(50% - 2.5rem);
+    }
+    section#contact-us {
+        min-height: 22rem;
     }
 }
 

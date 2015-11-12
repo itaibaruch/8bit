@@ -20,18 +20,32 @@ $(document).ready(function(){
 });
 
 $(window).on('scroll',function(){
-   if(windowWidth > 480){
+   if(windowWidth > 544){
         rockStar.checkScrollForParallax();
+   }else{
+        rockStar.checkIfToShowMainNavbar(); 
    }
    rockStar.checkIfToActiveNavLink();
-   rockStar.checkIfToShowMainNavbar();
 });
 
 $(window).load(function(){
     //after the content is loaded we reinitialize all the waypoints for the animations
     rockStar.initAnimationsCheck();
 });  
+$('#jobs-options li a').click(function(e){
+    e.preventDefault();
+    var tab_target = $(this).attr('href');
+    $('#careers .scroll-arrow').hide();
+    $('#job-detail').addClass('in');
+    $('#job-detail .tab-content div').removeClass('active');
+    $('#job-detail .tab-content').find(tab_target).addClass('active');
+});
 
+$('#job-detail .btn-close').click(function(e){
+    e.preventDefault();
+    $('#job-detail').removeClass('in');
+    $('#careers .scroll-arrow').show();
+})
 // on click a[data-scroll="true"] animate scroll to id
 $('a[data-scroll="true"]').click(function(e){         
     var scroll_target = $(this).data('id');
@@ -47,6 +61,20 @@ $('a[data-scroll="true"]').click(function(e){
         }, 1000);
     }
 });
+
+
+//when user click on job tile
+// $('.job-title small[data-target="#job-form"]').click(function(e){
+//     var $jobForm = $('#job-form');
+//     var careerH = $('#careers').height();
+//     if($jobForm.attr('class') === 'collapse in'){
+//         $('#careers').css('height' , careerH - 400);
+//         $('#careers .parallax').css('height' , careerH - 400);
+//     }else{
+//         $('#careers').css('height' , careerH + 400);
+//         $('#careers .parallax').css('height' , careerH + 400);
+//     }
+// });
 
 var rockStar = {
     initAnimationsCheck: function(){
@@ -141,11 +169,11 @@ var rockStar = {
         // This is necessary so you never see what is "behind" the navbar.
         if (st > lastScrollTop && st > navbarHeight){
             // Scroll Down
-            $('#main-navbar').slideUp('fast');
+            $('#main-navbar').slideUp();
         } else {
             // Scroll Up
             if(st + windowHeight < docHeight) {
-                $('#main-navbar').slideDown('fast');
+                $('#main-navbar').slideDown();
             }
         }
         
