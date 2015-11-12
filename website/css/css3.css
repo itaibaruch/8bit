@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5, h6,
     word-spacing: 0.5rem;
     letter-spacing: 0.15rem;
 }
+h4, h5, h6,
+.nav-item.nav-link{
+    word-spacing: 0;
+}
 .btn{
     border-radius: 0;
 }
@@ -292,6 +296,14 @@ a.scroll-arrow {
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+    padding: 0.5rem 0 0 0.5rem;
+}
+a span.scroll-arrow-inner{
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-right: .5rem solid #fff;
+    border-bottom: .5rem solid #fff;
 }
 
 /*
@@ -528,7 +540,7 @@ section#what-we-do h2{
 }
 section#careers,
 section#careers .parallax{
-    height: 165rem;
+    height: 175rem;
 }
 section#careers h2{
     margin-top: 10rem;
