@@ -38,10 +38,6 @@ h4, h5, h6,
 .m-auto{
     margin: 0 auto;
 }
-a.c-b,
-a.c-b:hover{
-    text-decoration: none;
-}
 .waypoint{
     opacity: 0;
     -webkit-transition: all 0.8s ease-out 0.2s;
@@ -512,6 +508,7 @@ footer{
     position: relative;
     background-color: #f7f7f7;
     min-height: 6rem;
+    color: #fff;
 }
 
 .img-footer{
@@ -527,7 +524,11 @@ footer{
     height: 50vh;
     background-position: 50%;
 }
-
+footer a,
+footer a:hover{
+    color: #fff;
+    text-decoration: none;
+}
 /*
  fixes // TODO : arrage;
  */
