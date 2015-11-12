@@ -32,7 +32,20 @@ $(window).load(function(){
     //after the content is loaded we reinitialize all the waypoints for the animations
     rockStar.initAnimationsCheck();
 });  
+$('#jobs-options li a').click(function(e){
+    e.preventDefault();
+    var tab_target = $(this).attr('href');
+    $('#careers .scroll-arrow').hide();
+    $('#job-detail').addClass('in');
+    $('#job-detail .tab-content div').removeClass('active');
+    $('#job-detail .tab-content').find(tab_target).addClass('active');
+});
 
+$('#job-detail .btn-close').click(function(e){
+    e.preventDefault();
+    $('#job-detail').removeClass('in');
+    $('#careers .scroll-arrow').show();
+})
 // on click a[data-scroll="true"] animate scroll to id
 $('a[data-scroll="true"]').click(function(e){         
     var scroll_target = $(this).data('id');
@@ -48,6 +61,7 @@ $('a[data-scroll="true"]').click(function(e){
         }, 1000);
     }
 });
+
 
 //when user click on job tile
 // $('.job-title small[data-target="#job-form"]').click(function(e){

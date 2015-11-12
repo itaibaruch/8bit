@@ -9,6 +9,12 @@ h1, h2, h3, h4, h5, h6,
     word-spacing: 0.5rem;
     letter-spacing: 0.15rem;
 }
+.btn{
+    border-radius: 0;
+}
+.btn-success{
+    background-color: #008a00;
+}
 .nav-item.nav-link{
     word-spacing: 0;
     letter-spacing: 0.05rem; 
@@ -405,7 +411,7 @@ section#careers .parallax{
     transform: translateY(-35%);
 }
 #careers .jobs{
-    padding: 2rem;
+    padding: 2rem 2rem 0 2rem;
     border: .2rem solid #008a00;
     margin-bottom: 5rem;
 }
@@ -415,7 +421,30 @@ section#careers .parallax{
 #job-form{
     min-height: 10rem;
 }
-
+#jobs-options{
+    list-style: none;
+    padding-left: 0;
+}
+#job-detail{
+    padding-bottom: 4rem;
+    border-bottom: .2rem solid #008a00;
+}
+#job-detail.no-parallax{
+    z-index: 10;
+}
+#job-detail a.scroll-arrow{
+    bottom: -1.9rem;
+}
+#job-detail .container{
+    position: relative;
+} 
+#job-detail .btn-close{
+    font-size: 200%;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+}
 /*
  job
  */
@@ -572,7 +601,7 @@ section#job .parallax{
     section#careers,
     section#careers .parallax{
         /*height: 70rem;*/
-        height: 135rem;
+        height: 138rem;
     }
     /*section#job,
     section#job .parallax{
