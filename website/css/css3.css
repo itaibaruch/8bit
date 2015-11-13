@@ -1,5 +1,6 @@
 html, body{
     /*font-family: 'upheavtt';*/
+    background-color: #f7f7f7;
 }
 h1, h2, h3, h4, h5, h6,
 .nav-item.nav-link{
@@ -461,6 +462,28 @@ section#careers .parallax{
     right: 2rem;
     cursor: pointer;
 }
+/*#job-detail .tab-content .tab-pane ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}*/
+
+#job-detail .tab-content .tab-pane ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+#job-detail .tab-content .tab-pane li { 
+    padding-left: 1rem; 
+    text-indent: -.7rem;
+}
+
+#job-detail .tab-content .tab-pane li:before {
+    content: "• ";
+    color: #008a00;
+}
+
 /*
  job
  */
