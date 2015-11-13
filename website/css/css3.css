@@ -263,7 +263,7 @@ section h2.heading{
     border-radius: 50%;
     margin: 0 auto;
     width: 50vw;
-    height: 50vw;
+    height: 50vh;
     margin-top: 3rem;
     padding: .5rem;
 }
@@ -688,7 +688,7 @@ section#job .parallax{
     }
     .black-ball{
         width: 35vw;
-        height: 35vw;
+        height: 35vh;
     }
     /*section#job,
     section#job .parallax{
@@ -739,7 +739,7 @@ section#job .parallax{
 @media (min-width: 62em) {
     .black-ball{
         width: 40vw;
-        height: 40vw;
+        height: 40vh;
         margin-top: 0;
     }
 }
@@ -748,6 +748,6 @@ section#job .parallax{
 @media (min-width: 75em) {
     .black-ball{
         width: 25vw;
-        height: 25vw;
+        height: 25vh;
     }
 }
