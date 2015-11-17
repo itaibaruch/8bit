@@ -263,7 +263,7 @@ section h2.heading{
     border-radius: 50%;
     margin: 0 auto;
     width: 50vw;
-    /*height: 50vh;*/
+    height: 50vh;
     margin-top: 3rem;
     padding: .5rem;
 }
@@ -271,21 +271,11 @@ section h2.heading{
     margin: auto;
 }
 
-.black-ball p {
-    font-size: 0.9rem;
-    font-family: 'upheavtt';
-    text-align: center;
-    text-transform: uppercase;
-    word-spacing: 0;
-    letter-spacing: 0.05rem;
-    background-color: #000000;
-}
-
 .section-header .content .lead{
     display: none;
+    font-size: .8rem;
     line-height: 1rem;
     padding: .5rem 2rem 0;
-    color: #e0e0e0;
 }
 a.scroll-arrow {
     background-color: #00a800;
@@ -316,10 +306,6 @@ a span.scroll-arrow-inner{
 /*
     About
  */
-
-#about .row .col-sm-6.col-md-3{
-    min-height: 30rem;
-}
 .square{
     margin: 2rem auto;
 }
