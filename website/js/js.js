@@ -48,17 +48,19 @@ $('#job-detail .btn-close').click(function(e){
 })
 // on click a[data-scroll="true"] animate scroll to id
 $('a[data-scroll="true"]').click(function(e){         
+    var _this = this;
     var scroll_target = $(this).data('id');
     var scroll_trigger = $(this).data('scroll');
     
     if(scroll_trigger == true && scroll_target !== undefined){
         e.preventDefault();
-        $('a[data-scroll="true"]').removeClass('active');
-        $(this).addClass('active');
+        $('nav.navbar-nav a[data-scroll="true"]').removeClass('active');
 
         $('html, body').stop().animate({
              scrollTop: $(scroll_target).offset().top - 65
-        }, 1000);
+        }, 1000, 'linear', function(){
+            $(_this).addClass('active');
+        });
     }
 });
 
@@ -135,23 +137,33 @@ var rockStar = {
         $('section').each(function() {
             var $el = $(this);
             var elId = $el.attr('id');
-            if(isElementInViewport($el)){
+            // fix for #about section (becuse the hight of that section is small)
+            // TODO : make it smarter
+            if($el.attr('id') === 'what-we-do' && $(window).scrollTop() > 700 && $(window).scrollTop() < 1100 ){
                 $('#nav-links a').each(function(){
                     var $link = $(this);
-                    if($link.attr('data-id') === '#'+elId){
+                    if($link.attr('data-id') === '#about'){
                         $link.addClass('active');
                     } else {
-                        $link.removeClass('active');
+                        $link.removeClass('active');    
                     }
+                });
+            } else {
+                if(isElementInViewport($el)){
+                    $('#nav-links a').each(function(){
+                        var $link = $(this);
+                        if($link.attr('data-id') === '#'+elId){
+                            $link.addClass('active');
+                        } else {
+                            $link.removeClass('active');
+                        }
 
-                    //exceptions - when one data-id can be active for two sections
-                    // if($link.attr('data-id') === '#careers' && elId === 'job' ){
-                    //     $link.addClass('active');
-                    // }
-                    if($link.attr('data-id') === '#contact-us' && elId === 'map' ){
-                        $link.addClass('active');
-                    }
-                })
+                        //exceptions - when one data-id can be active for two sections
+                        if($link.attr('data-id') === '#contact-us' && elId === 'map' ){
+                            $link.addClass('active');
+                        }
+                    })
+                }
             }
         });
     }, 10),
