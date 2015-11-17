@@ -687,6 +687,10 @@ section#job .parallax{
     .img-address{
         margin: -2rem auto -16rem;
     }
+
+    #careers .jobs{
+        height: 35rem;
+    }
 }
 
  /*Medium devices (tablets, 48em and up)*/
@@ -730,7 +734,7 @@ section#job .parallax{
         height: 11rem; 
     }*/
     #careers .jobs{
-        height: 16rem;
+        height: 20rem;
     }
     #open-source{
         text-align: right;
@@ -755,6 +759,9 @@ section#job .parallax{
         width: 40vw;
         height: 40vh;
         margin-top: 0;
+    }
+    #careers .jobs{
+        height: 15rem;
     }
 }
 

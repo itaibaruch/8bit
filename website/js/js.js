@@ -1,4 +1,4 @@
-
+// window.scrollTo(0,0);
 var windowHeight;
 var windowWidth;
 var docWidth;
