@@ -92,7 +92,7 @@ var rockStar = {
            }
            
            var waypoints = $(this).waypoint(function(direction) {
-                if(direction == 'down'){
+                if(direction == 'down' && windowWidth > 544){
                         $(this.element).addClass('animate');    
                    } else {
                        $(this.element).removeClass('animate');

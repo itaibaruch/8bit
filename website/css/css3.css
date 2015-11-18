@@ -40,7 +40,7 @@ h4, h5, h6,
     margin: 0 auto;
 }
 .waypoint{
-    opacity: 0;
+    opacity: 1;
     -webkit-transition: all 0.8s ease-out 0.2s;
     -moz-transition: all 0.8s ease-out 0.2s;
     -o-transition: all 0.8s ease-out 0.2s;
@@ -400,7 +400,7 @@ section#team h3.title{
     width: 30%;
 }
 #members .title-wrap{
-    min-height: 130px;
+    min-height: 9rem;
     padding-top: 1rem;
 }
 
@@ -631,6 +631,14 @@ section#job .parallax{
 
 /*Small devices (landscape phones, 34em and up)*/
 @media (min-width: 34em) {
+    .waypoint{
+        opacity: 0;
+        -webkit-transition: all 0.8s ease-out 0.2s;
+        -moz-transition: all 0.8s ease-out 0.2s;
+        -o-transition: all 0.8s ease-out 0.2s;
+        -ms-transition: all 0.8s ease-out 0.2s;
+        transition: all 0.8s ease-out 0.2s;
+    }
     .nav-wrapper{
         float: right;
     }
