@@ -30,8 +30,11 @@ $(window).on('scroll',function(){
 
 $(window).load(function(){
     //after the content is loaded we reinitialize all the waypoints for the animations
-    rockStar.initAnimationsCheck();
-});  
+    if(windowWidth > 544){
+        rockStar.initAnimationsCheck();
+    }
+}); 
+
 
 // open jobs description on clicking on job title
 $('#jobs-options li a').click(function(e){
@@ -92,7 +95,7 @@ var rockStar = {
            }
            
            var waypoints = $(this).waypoint(function(direction) {
-                if(direction == 'down' && windowWidth > 544){
+                if(direction == 'down'){
                         $(this.element).addClass('animate');    
                    } else {
                        $(this.element).removeClass('animate');
