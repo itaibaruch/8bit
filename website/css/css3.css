@@ -282,9 +282,8 @@ section h2.heading{
 }
 
 .section-header .content .lead{
-    display: none;
+    /*display: none;*/
     line-height: 1rem;
-    padding: .5rem 2rem 0;
     color: #e0e0e0;
 }
 a.scroll-arrow {
@@ -397,6 +396,12 @@ section#team h3.title{
 
 #members img{
     border-radius: 50%;
+    float: left;
+    width: 30%;
+}
+#members .title-wrap{
+    min-height: 130px;
+    padding-top: 1rem;
 }
 
 /*
@@ -636,6 +641,7 @@ section#job .parallax{
     }
     .section-header .content .lead{
         display: block;
+        padding: .5rem 2rem 0;
     }
     .black-ball{
         padding: .5rem 2rem;
@@ -671,6 +677,11 @@ section#job .parallax{
     section#job .parallax{
         height: 45rem;
     }*/
+    #members img{
+        border-radius: 50%;
+        float: none;
+        width: 100%;
+    }
     .team-wrapper{
         width: 30rem;
         height: 50rem;

@@ -32,6 +32,8 @@ $(window).load(function(){
     //after the content is loaded we reinitialize all the waypoints for the animations
     rockStar.initAnimationsCheck();
 });  
+
+// open jobs description on clicking on job title
 $('#jobs-options li a').click(function(e){
     e.preventDefault();
     var tab_target = $(this).attr('href');
@@ -41,12 +43,14 @@ $('#jobs-options li a').click(function(e){
     $('#job-detail .tab-content').find(tab_target).addClass('active');
 });
 
+// on clicking on the X button in the job description
 $('#job-detail .btn-close').click(function(e){
     e.preventDefault();
     $('#job-detail').removeClass('in');
     $('#careers .scroll-arrow').show();
 })
-// on click a[data-scroll="true"] animate scroll to id
+
+// on click a[data-scroll="true"] animate scroll to id. the small down arrow on bottom of each section
 $('a[data-scroll="true"]').click(function(e){         
     var _this = this;
     var scroll_target = $(this).data('id');
@@ -134,6 +138,7 @@ var rockStar = {
             
     }, 5),
     checkIfToActiveNavLink: debounce(function() {   
+        // when a section is seen on the screen, we active the relevent nav-item
         $('section').each(function() {
             var $el = $(this);
             var elId = $el.attr('id');
@@ -167,7 +172,8 @@ var rockStar = {
             }
         });
     }, 10),
-    checkIfToShowMainNavbar: debounce(function() {           
+    checkIfToShowMainNavbar: debounce(function() {   
+        // hideing navbar on mobile 
         var delta = 5;
         var navbarHeight = $('#main-navbar').outerHeight();
 
