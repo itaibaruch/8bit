@@ -404,6 +404,62 @@ section#team h3.title{
     padding-top: 1rem;
 }
 
+.team-sprite{
+    background-image: url('../img/all-sprite.jpg');
+    background-repeat: no-repeat;
+    background-size: 500%;
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    border-radius: 50%;
+    float: left;
+}
+.team-sprite-1{
+    background-position: 0 0;
+}
+.team-sprite-2{
+    background-position: 25% 0;
+}
+.team-sprite-3{
+    background-position: 50% 0;
+}
+.team-sprite-4{
+    background-position: 75% 0;
+}
+.team-sprite-5{
+    background-position: 100% 0;
+}
+.team-sprite-6{
+    background-position: 0 50%;
+}
+.team-sprite-7{
+    background-position: 25% 50%;
+}
+.team-sprite-8{
+    background-position: 50% 50%;
+}
+.team-sprite-9{
+    background-position: 75% 50%;
+}
+.team-sprite-10{
+    background-position: 100% 50%;
+}
+.team-sprite-11{
+    background-position: 0 100%;
+}
+.team-sprite-12{
+    background-position: 25% 100%;
+}
+.team-sprite-13{
+    background-position: 50% 100%;
+}
+.team-sprite-14{
+    background-position: 75% 100%;
+}
+.team-sprite-15{
+    background-position: 100% 100%;
+}
+
 /*
  careers
  */
@@ -689,6 +745,11 @@ section#job .parallax{
         border-radius: 50%;
         float: none;
         width: 100%;
+    }
+    .team-sprite{
+        width: 100%;
+        padding-bottom: 100%;
+        float: none;
     }
     .team-wrapper{
         width: 30rem;
