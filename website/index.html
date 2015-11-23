@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- <meta http-equiv="Cache-control" content="public">
+    <meta http-equiv="Cache-control" content="private">
+    <meta http-equiv="Cache-control" content="no-cache"> -->
+    <meta http-equiv="Cache-control" content="no-store">
+    <meta http-equiv="Cache-control" content="max-age=1000">
 
     <title> 8 Bit Rockstars | Powering NFQ Group </title>
     <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
@@ -29,10 +34,36 @@
     <link rel="stylesheet" href="css/css3.css">
     
     <!-- font -->
-    <link rel="stylesheet" href="css/upheavtt.css">
+    <!-- <link rel="stylesheet" href="css/upheavtt.css"> -->
+    <style>
+      @font-face {
+          font-family: 'upheavtt';
+          src: url('fonts/upheavtt.eot');
+          src: url('fonts/upheavtt.eot') format('embedded-opentype'),
+               url('fonts/upheavtt.woff2') format('woff2'),
+               url('fonts/upheavtt.woff') format('woff'),
+               url('fonts/upheavtt.ttf') format('truetype'),
+               url('fonts/upheavtt.svg#upheavtt') format('svg');
+      }
+    </style>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- <script src="js/ie10-viewport-bug-workaround.js"></script> -->
+    <script type="text/javascript">
+      (function () {
+        'use strict';
+
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+          var msViewportStyle = document.createElement('style')
+          msViewportStyle.appendChild(
+            document.createTextNode(
+              '@-ms-viewport{width:auto!important}'
+            )
+          )
+          document.querySelector('head').appendChild(msViewportStyle)
+        }
+      })();
+    </script>
   </head>
   <body>
 
