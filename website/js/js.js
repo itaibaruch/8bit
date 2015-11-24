@@ -30,9 +30,9 @@ $(window).on('scroll',function(){
 
 $(window).load(function(){
     //after the content is loaded we reinitialize all the waypoints for the animations
-    if(windowWidth > 544){
-        rockStar.initAnimationsCheck();
-    }
+    // if(windowWidth > 544){
+    //     rockStar.initAnimationsCheck();
+    // }
 }); 
 
 
