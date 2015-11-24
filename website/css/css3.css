@@ -681,29 +681,117 @@ section#job .parallax{
 }
 
 /*
- sprite
+ png sprite
  */
+.sprite-png{
+    background-image: url('../img/png-sprite.png');
+    background-repeat: no-repeat;
+    height: 0;
+}
 .sprite-pepole {
-    background: url('../img/sprite.png') no-repeat -8px 0;
-    width: 154px;
-    height: 154px;
+    background-position: 82% 36.5%;
+    background-size: 1000%;
+    width: 80%;
+    padding-bottom: 80%;
 }
 .sprite-visit {
-    background: url('../img/sprite.png') no-repeat -168px 0;
-    width: 154px;
-    height: 154px;
+    background-position: 93.5% 36.5%;
+    background-size: 1000%;
+    width: 80%;
+    padding-bottom: 80%;
 }
 .sprite-startup {
-    background: url('../img/sprite.png') no-repeat -326px 0;
-    width: 154px;
-    height: 154px;
+    background-position: 82% 47.5%;
+    background-size: 1000%;
+    width: 80%;
+    padding-bottom: 80%;
 }
 .sprite-first {
-    background: url('../img/sprite.png') no-repeat -486px 0;
-    width: 154px;
-    height: 154px;
+    background-position: 93.5% 47.5%;
+    background-size: 1000%;
+    width: 80%;
+    padding-bottom: 80%;
 }
 
+.what-we-do-sprite{
+    background-size: 425%;
+    width: 100%;
+    padding-bottom: 94%;
+}
+#open-source{width: 15rem;margin: 0 auto;}
+.open-source{
+    background-position: 0% 41%;
+}
+#build-teams{width: 15rem;margin: 0 auto;}
+.build-teams{
+    background-position: 31% 41%;
+}
+#best-work{width: 15rem;margin: 0 auto;}
+.best-work{
+    background-position: 63% 41%;
+}
+
+.team-png-sprite{
+    background-image: url('../img/png-sprite.png');
+    background-repeat: no-repeat;
+    height: 0;
+    background-size: 300%;
+    width: 80%;
+    padding-bottom: 80%;
+    margin: 0 auto;
+}
+
+.team-png-sprite.lars{
+    background-position: 0 0;
+}
+.team-png-sprite.joseph{
+    background-position: 53% 0;
+}
+
+.img-png-sprite{
+    background-image: url('../img/png-sprite.png');
+    background-repeat: no-repeat;
+    height: 0;
+    background-size: 420%;
+    width: 100%;
+    padding-bottom: 100%;
+    margin: 0 auto;
+}
+.team-1{
+    background-position: 0 70%;
+}
+.team-2{
+    background-position: 31.5% 70%;
+}
+.team-3{
+    background-position: 63% 70%;
+}
+.team-4{
+    background-position: 94.4% 70%;
+}
+.team-5{
+    background-position: 0 100%;
+}
+.team-6{
+    background-position: 31.5% 100%;
+}
+.team-7{
+    background-position: 63% 100%;
+}
+.team-8{
+    background-position: 94.4% 100%;
+}
+
+#address{
+    background-image: url('../img/png-sprite.png');
+    background-repeat: no-repeat;
+    height: 0;
+    background-size: 300%;
+    width: 100%;
+    padding-bottom: 100%;
+    margin: 0 auto;
+    background-position: 103% 1%;
+}
 /*Small devices (landscape phones, 34em and up)*/
 @media (min-width: 34em) {
     .waypoint{
@@ -782,6 +870,14 @@ section#job .parallax{
     #team-6{ display:block; position:absolute; top: 24rem; left: 8rem;}
     #team-7{ display:block; position:absolute; top: 32rem; left: 0rem;}
     #team-8{ display:block; position:absolute; top: 32rem; left: 16rem;}
+    
+
+    .open-source{
+        float:right;
+    }
+    .build-teams{
+        float: left;
+    }
 
     .img-address{
         margin: -2rem auto -16rem;
@@ -835,12 +931,13 @@ section#job .parallax{
     #careers .jobs{
         height: 20rem;
     }
-    #open-source{
-        text-align: right;
-        margin-bottom: -2rem;
+    .open-source{
+        float: right;
+         margin-bottom: -2rem;
     }
-    #build-teams{
-        text-align: left;   
+    .build-teams{
+        float: left;
+        margin-bottom: -2rem;
     }
     .img-footer{
         margin: auto;
