@@ -14,6 +14,14 @@ h4, h5, h6,
 .nav-item.nav-link{
     word-spacing: 0;
 }
+img {
+    vertical-align: middle;
+}
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 .btn{
     border-radius: 0;
 }
