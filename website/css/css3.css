@@ -688,7 +688,29 @@ section#job .parallax{
     background-repeat: no-repeat;
     height: 0;
 }
+
 .sprite-pepole {
+    background: url('../img/sprite.png') no-repeat -8px 0;
+    width: 154px;
+    height: 154px;
+}
+.sprite-visit {
+    background: url('../img/sprite.png') no-repeat -168px 0;
+    width: 154px;
+    height: 154px;
+}
+.sprite-startup {
+    background: url('../img/sprite.png') no-repeat -326px 0;
+    width: 154px;
+    height: 154px;
+}
+.sprite-first {
+    background: url('../img/sprite.png') no-repeat -486px 0;
+    width: 154px;
+    height: 154px;
+}
+
+/*.sprite-pepole {
     background-position: 82% 36.5%;
     background-size: 1000%;
     width: 80%;
@@ -711,7 +733,7 @@ section#job .parallax{
     background-size: 1000%;
     width: 80%;
     padding-bottom: 80%;
-}
+}*/
 
 .what-we-do-sprite{
     background-size: 425%;
