@@ -485,13 +485,13 @@ section#careers .parallax{
     margin: 0 auto;
 }
 #team-1{ display: none;}
-#team-2{ position:relative}
-#team-3{ display: none;}
+#team-2{ display: none;}
+#team-3{ position:relative;}
 #team-4{ display: none;}
-#team-5{ position:relative}
+#team-5{ display: none;}
 #team-6{ display: none;}
 #team-7{ position:relative}
-#team-8{ display: none;}
+#team-8{ position:relative}
 
 /*#team-1{ position:absolute; top: 0rem; left: 0rem;}
 #team-2{ position:absolute; top: 8rem; left: 8rem;}
