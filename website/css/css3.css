@@ -521,9 +521,11 @@ section#careers .parallax{
     -ms-transform: translateY(-35%);
     transform: translateY(-35%);
 }
+.container-job{
+    border: .2rem solid #008a00;
+}
 #careers .jobs{
     padding: 2rem 2rem 0 2rem;
-    border: .2rem solid #008a00;
     margin-bottom: 5rem;
 }
 .job-title{
@@ -662,7 +664,7 @@ section#what-we-do h2{
 }
 section#careers,
 section#careers .parallax{
-    height: 125rem;
+    height: 135rem;
 }
 section#careers h2{
     margin-top: 10rem;
