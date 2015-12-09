@@ -919,6 +919,9 @@ section#job .parallax{
         margin-right: 1rem;
         font-size: 100%;
     }
+    .navbar.navbar-fixed-top .container{
+        max-width: 100%;
+    }
     .section .content {
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -977,6 +980,9 @@ section#job .parallax{
 
  /*Large devices (desktops, 62em and up)*/
 @media (min-width: 62em) {
+    .navbar.navbar-fixed-top .container{
+        max-width: 940px;
+    }
     .black-ball{
         width: 40vw;
         height: 40vh;
