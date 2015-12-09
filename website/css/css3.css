@@ -833,6 +833,7 @@ section#job .parallax{
         width: auto;
         margin: 0;
         padding: 1rem .5rem 0;
+        font-size: 80%;
     }
     .section-header .content .lead{
         display: block;
@@ -916,6 +917,7 @@ section#job .parallax{
 @media (min-width: 48em) {
     .navbar.navbar-fixed-top .nav.navbar-nav .nav-item.nav-link{
         margin-right: 1rem;
+        font-size: 100%;
     }
     .section .content {
         top: 50%;
