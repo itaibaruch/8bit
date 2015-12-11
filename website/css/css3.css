@@ -995,6 +995,9 @@ section#job .parallax{
 
  /*Extra large devices (large desktops, 75em and up)*/
 @media (min-width: 75em) {
+    .navbar.navbar-fixed-top .container{
+        max-width: 1140px;
+    }
     .black-ball{
         width: 25vw;
         height: 25vh;
