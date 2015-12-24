@@ -44,6 +44,9 @@ img {
 .b-b{
     background-color: #373A3C;
 }
+.b-black{
+    background-color: #000;
+}
 .m-auto{
     margin: 0 auto;
 }
@@ -292,7 +295,7 @@ section h2.heading{
 .section-header .content .lead{
     /*display: none;*/
     line-height: 1rem;
-    color: #e0e0e0;
+    /*color: #e0e0e0;*/
 }
 a.scroll-arrow {
     background-color: #00a800;
@@ -840,7 +843,7 @@ section#job .parallax{
     }
     .section-header .content .lead{
         display: block;
-        padding: .5rem 2rem 0;
+        padding: .5rem 0;
     }
     .black-ball{
         padding: .5rem 2rem;
