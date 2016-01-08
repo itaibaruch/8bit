@@ -50,6 +50,9 @@ img {
 .m-auto{
     margin: 0 auto;
 }
+.hide{
+  display: none;
+}
 .waypoint{
     opacity: 1;
     -webkit-transition: all 0.8s ease-out 0.2s;
@@ -475,6 +478,9 @@ section#team h3.title{
 }
 .team-sprite-17{
     background-position: 100% 50%;
+}
+.team-sprite-18{
+    background-position: 100% 100%;
 }
 
 /*
