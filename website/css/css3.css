@@ -483,6 +483,26 @@ section#team h3.title{
     background-position: 100% 100%;
 }
 
+.team-sprite2{
+    background-image: url('../img/all-sprite-2.jpg');
+    background-repeat: no-repeat;
+    background-size: 600%;
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    border-radius: 50%;
+    float: left;
+}
+.team-sprite2-1{
+    background-position: 0 0;
+}
+.team-sprite2-2{
+    background-position: 20% 0;
+}
+.team-sprite2-3{
+    background-position: 40% 0;
+}
+
 /*
  careers
  */
@@ -775,8 +795,8 @@ section#job .parallax{
     background-repeat: no-repeat;
     height: 0;
     background-size: 300%;
-    width: 80%;
-    padding-bottom: 80%;
+    width: 50%;
+    padding-bottom: 50%;
     margin: 0 auto;
 }
 
@@ -893,7 +913,8 @@ section#job .parallax{
         float: none;
         width: 100%;
     }
-    .team-sprite{
+    .team-sprite,
+    .team-sprite2{
         width: 100%;
         padding-bottom: 100%;
         float: none;
