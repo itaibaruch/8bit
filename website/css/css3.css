@@ -502,6 +502,21 @@ section#team h3.title{
 .team-sprite2-3{
     background-position: 40% 0;
 }
+.team-sprite2-4{
+    background-position: 60% 0;
+}
+.team-sprite2-5{
+    background-position: 80% 0;
+}
+.team-sprite2-6{
+    background-position: 100% 0;
+}
+.team-sprite2-7{
+    background-position: 0 50%;
+}
+.team-sprite2-8{
+    background-position: 20% 50%;
+}
 
 /*
  careers
