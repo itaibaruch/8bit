@@ -684,7 +684,7 @@ section#careers .parallax{
  contact us
  */
 section#contact-us{
-    height: 25rem;
+    height: 35rem;
     background: #000;
     z-index: 11;
 }
@@ -705,10 +705,10 @@ section#contact-us{
  footer
  */
 footer{
-    padding: 0.5rem 3rem;
+    padding: 2rem 3rem 1rem;
     position: relative;
     background-color: #f7f7f7;
-    min-height: 6rem;
+    min-height: 10rem;
     color: #fff;
     font-size: 12px;
 }
