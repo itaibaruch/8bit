@@ -7,9 +7,9 @@ var lastScrollTop = 0;
 
 $(document).ready(function(){
     BrowserDetect.init();
-    
+
     if(BrowserDetect.browser == 'Explorer' && BrowserDetect.version <= 9){
-        $('body').html(oldBrowser);   
+        $('body').html(oldBrowser);
     }
 
     windowWidth = $(window).width();
@@ -23,7 +23,7 @@ $(window).on('scroll',function(){
    if(windowWidth > 544){
         rockStar.checkScrollForParallax();
    }else{
-        rockStar.checkIfToShowMainNavbar(); 
+        rockStar.checkIfToShowMainNavbar();
    }
    rockStar.checkIfToActiveNavLink();
 });
@@ -33,7 +33,7 @@ $(window).load(function(){
     // if(windowWidth > 544){
     //     rockStar.initAnimationsCheck();
     // }
-}); 
+});
 
 
 // open jobs description on clicking on job title
@@ -54,11 +54,11 @@ $('#job-detail .btn-close').click(function(e){
 })
 
 // on click a[data-scroll="true"] animate scroll to id. the small down arrow on bottom of each section
-$('a[data-scroll="true"]').click(function(e){         
+$('a[data-scroll="true"]').click(function(e){
     var _this = this;
     var scroll_target = $(this).data('id');
     var scroll_trigger = $(this).data('scroll');
-    
+
     if(scroll_trigger == true && scroll_target !== undefined){
         e.preventDefault();
         $('nav.navbar-nav a[data-scroll="true"]').removeClass('active');
@@ -87,16 +87,16 @@ $('a[data-scroll="true"]').click(function(e){
 
 var rockStar = {
     initAnimationsCheck: function(){
-        // on scroll animate [class*="waypoint"] fade in/out 
+        // on scroll animate [class*="waypoint"] fade in/out
         $('[class*="waypoint"]').each(function(){
            offset_diff = 30;
            if($(this).hasClass('title')){
                offset_diff = 110;
            }
-           
+
            var waypoints = $(this).waypoint(function(direction) {
                 if(direction == 'down'){
-                        $(this.element).addClass('animate');    
+                        $(this.element).addClass('animate');
                    } else {
                        $(this.element).removeClass('animate');
                    }
@@ -104,43 +104,43 @@ var rockStar = {
                   offset: windowHeight - offset_diff
            });
         });
-  
+
     },
-    checkScrollForParallax: debounce(function() {   
+    checkScrollForParallax: debounce(function() {
         // on scroll .parallax if in view will show paralex
         $('.parallax').each(function() {
             var $el = $(this);
-            
+
             if(isElementInViewport($el)){
-                var parentTop = $el.offset().top;          
+                var parentTop = $el.offset().top;
                 var windowBottom = $(window).scrollTop();
                 var $image = $el.find('img').first();
-                
+
                 var iVal = ((windowBottom - parentTop) / 30);
-                $image.css('transform','translate3d(0rem, ' + iVal + 'rem, 0rem)'); 
+                $image.css('transform','translate3d(0rem, ' + iVal + 'rem, 0rem)');
 
                 var $logo = $el.find('.black-ball');
                 if($logo){
                     var lVal = ((windowBottom - parentTop) / 60);
-                    $logo.css('transform','translate3d(0rem, ' + lVal + 'rem, 0rem)');    
+                    $logo.css('transform','translate3d(0rem, ' + lVal + 'rem, 0rem)');
                 }
 
                 var $wwd = $el.find('.what-we-do');
                 if($wwd){
                     var wVal = ((windowBottom - parentTop) / 120);
-                    $wwd.css('transform','translate3d(0rem, ' + wVal + 'rem, 0rem)');    
+                    $wwd.css('transform','translate3d(0rem, ' + wVal + 'rem, 0rem)');
                 }
 
                 var $career = $el.find('.career');
                 if($career){
                     var cVal = ((windowBottom - parentTop) / 120);
-                    $career.css('transform','translate3d(0rem, ' + cVal + 'rem, 0rem)');    
+                    $career.css('transform','translate3d(0rem, ' + cVal + 'rem, 0rem)');
                 }
             }
         });
-            
+
     }, 5),
-    checkIfToActiveNavLink: debounce(function() {   
+    checkIfToActiveNavLink: debounce(function() {
         // when a section is seen on the screen, we active the relevent nav-item
         $('section').each(function() {
             var $el = $(this);
@@ -153,7 +153,7 @@ var rockStar = {
                     if($link.attr('data-id') === '#about'){
                         $link.addClass('active');
                     } else {
-                        $link.removeClass('active');    
+                        $link.removeClass('active');
                     }
                 });
             } else {
@@ -174,18 +174,18 @@ var rockStar = {
                 }
             }
         });
-    }, 10),
-    checkIfToShowMainNavbar: debounce(function() {   
-        // hideing navbar on mobile 
+    }, 5),
+    checkIfToShowMainNavbar: debounce(function() {
+        // hideing navbar on mobile
         var delta = 5;
         var navbarHeight = $('#main-navbar').outerHeight();
 
         var st = $(window).scrollTop();
-        
+
         // Make sure they scroll more than delta
         if(Math.abs(lastScrollTop - st) <= delta)
             return;
-        
+
         // If they scrolled down and are past the navbar, add class .nav-up.
         // This is necessary so you never see what is "behind" the navbar.
         if (st > lastScrollTop && st > navbarHeight){
@@ -197,7 +197,7 @@ var rockStar = {
                 $('#main-navbar').slideDown();
             }
         }
-        
+
         lastScrollTop = st;
 
     }, 10)
@@ -230,9 +230,9 @@ function isElementInViewport(el) {
     if (typeof jQuery === "function" && el instanceof jQuery) {
         el = el[0];
     }
-    
+
     var rect = el.getBoundingClientRect();
-    
+
     return (
         rect.bottom > 0 &&
         rect.right > 0 &&
@@ -310,24 +310,24 @@ var BrowserDetect = {
         return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
     },
     dataBrowser: [
-        { string: navigator.userAgent,subString: "Chrome",identity: "Chrome"}, 
-        { string: navigator.userAgent,subString: "OmniWeb",versionSearch: "OmniWeb/",identity: "OmniWeb"}, 
-        { string: navigator.vendor,subString: "Apple",identity: "Safari",versionSearch: "Version"}, 
-        { prop: window.opera,identity: "Opera",versionSearch: "Version"}, 
-        { string: navigator.vendor,subString: "iCab",identity: "iCab"}, 
-        { string: navigator.vendor,subString: "KDE",identity: "Konqueror"}, 
-        { string: navigator.userAgent,subString: "Firefox",identity: "Firefox"}, 
-        { string: navigator.vendor,subString: "Camino",identity: "Camino"}, 
+        { string: navigator.userAgent,subString: "Chrome",identity: "Chrome"},
+        { string: navigator.userAgent,subString: "OmniWeb",versionSearch: "OmniWeb/",identity: "OmniWeb"},
+        { string: navigator.vendor,subString: "Apple",identity: "Safari",versionSearch: "Version"},
+        { prop: window.opera,identity: "Opera",versionSearch: "Version"},
+        { string: navigator.vendor,subString: "iCab",identity: "iCab"},
+        { string: navigator.vendor,subString: "KDE",identity: "Konqueror"},
+        { string: navigator.userAgent,subString: "Firefox",identity: "Firefox"},
+        { string: navigator.vendor,subString: "Camino",identity: "Camino"},
         { string: navigator.userAgent,subString: "Netscape",identity: "Netscape"}, // for newer Netscapes (6+)
-        { string: navigator.userAgent,subString: "MSIE",identity: "Explorer",versionSearch: "MSIE"}, 
-        { string: navigator.userAgent,subString: ".NET",identity: "Explorer",versionSearch: "rv"}, 
-        { string: navigator.userAgent,subString: "Gecko",identity: "Mozilla",versionSearch: "rv"}, 
+        { string: navigator.userAgent,subString: "MSIE",identity: "Explorer",versionSearch: "MSIE"},
+        { string: navigator.userAgent,subString: ".NET",identity: "Explorer",versionSearch: "rv"},
+        { string: navigator.userAgent,subString: "Gecko",identity: "Mozilla",versionSearch: "rv"},
         { string: navigator.userAgent, subString: "Mozilla", identity: "Netscape", versionSearch: "Mozilla"} // for older Netscapes (4-)
         ],
     dataOS: [
-        { string: navigator.platform,subString: "Win",identity: "Windows"}, 
-        { string: navigator.platform,subString: "Mac",identity: "Mac"}, 
-        { string: navigator.userAgent,subString: "iPhone",identity: "iPhone/iPod"}, 
+        { string: navigator.platform,subString: "Win",identity: "Windows"},
+        { string: navigator.platform,subString: "Mac",identity: "Mac"},
+        { string: navigator.userAgent,subString: "iPhone",identity: "iPhone/iPod"},
         { string: navigator.platform, subString: "Linux", identity: "Linux"}
     ]
 };
